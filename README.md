@@ -2,6 +2,8 @@
 
 > 附一键替换代码
 
+[English](https://github.com/lzy1960/myconfig/blob/main/README-en.md)
+
 ## 系统字体
 
 前置：
