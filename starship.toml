@@ -1,0 +1,119 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+[░▒▓](#a3aed2)\
+$os\
+[](bg:#517598 fg:#a3aed2)\
+$username\
+[](bg:#769ff0 fg:#517598)\
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#212736)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#212736)\
+$cmd_duration\
+$package\
+$fill$conda$time\
+$memory_usage\
+\n$character"""
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[✗](bold red)'
+
+[package]
+symbol = '📦'
+format = '[ $symbol$version](208 bold) '
+
+[cmd_duration]
+format = '[ ⏱  $duration]($style)'
+style = 'bold cyan'
+
+[fill]
+symbol = ' '
+
+[username]
+show_always = true
+style_user = "fg:#a3aed2 bg:#517598"
+style_root = "fg:#a3aed2 bg:#517598"
+format = '[ 󰀄 $user ]($style)'
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = -1
+style = 'bold dimmed green fg:green'
+format = '[ ${ram}( | ${swap}) ]($style) '
+
+[directory]
+truncation_symbol = " "
+truncation_length = 10
+truncate_to_repo = true
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[ ($all_status$ahead_behind) ](fg:#769ff0 bg:#394260)]($style)'
+
+[nodejs]
+symbol = "󰎙"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[conda]
+symbol = ""
+style = "bg:#6585c8"
+format = '[ $symbol $environment ]($style)'
+ignore_base = false
+
+[rust]
+symbol = "🦀"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[os]
+style = "bg:#a3aed2 fg:#090c0c"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Linux = ""
+Macos = ""
+Ubuntu = ""
+Unknown = ""
+Windows = ""
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[   $time ](fg:#a0a9cb bg:#1d2230)]($style)'

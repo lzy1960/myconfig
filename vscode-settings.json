@@ -1,0 +1,242 @@
+{
+  // fileFormat
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[nginx]": {
+    "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // editor
+  "editor.smoothScrolling": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.fontFamily": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.stickyScroll.enabled": true,
+  // js & ts
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.format.enable": true,
+  // eslint
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": ["javascript", "vue", "html"],
+  // terminal
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Windows PowerShell": {
+      "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  // background
+  // 是否开启背景图显示
+  "background.enabled": true,
+  // 自定义显示的图片，【路径要用双引号】
+  "background.customImages": [
+    // 最多设置三张图片，默认显示最上方的图片，当打开多个侧边栏时再依次显示后面的背景图片
+    "https://hbimg.huaban.com/4c29d2c05ca1ea98d002befbbc1f8dc5d6119069583ad-HlxC5h"
+  ],
+  "background.useFront": false,
+  // 默认透明度是100%，看起来生硬，不够炫酷
+  "background.style": {
+    // 编辑器显示文字，默认在左上角
+    // "content": "'HELLO WORLD'",
+    "pointer-events": "none",
+    // 以下都是CSS显示样式设置
+    "position": "absolute",
+    "bottom": "0",
+    "right": "0",
+    // "width": "100%",
+    // "height": "100%",
+    // "z-index": "99999",
+    // "background.repeat": "no-repeat",
+    // "background-size": "cover",
+    // 设置透明度
+    "opacity": 0.2
+  },
+  // spell
+  "cSpell.userWords": [
+    "camelcase",
+    "cascader",
+    "codegen",
+    "commitlint",
+    "echarts",
+    "iconfont",
+    "iife",
+    "leetcode",
+    "nums",
+    "nuxt",
+    "pnpm",
+    "tiptap",
+    "typecheck",
+    "unocss",
+    "vnode",
+    "vuetify",
+    "vueuse",
+    "wechat"
+  ],
+  // prettier
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.jsxSingleQuote": true,
+  // debug
+  "debug.showBreakpointsInOverviewRuler": true,
+  // files
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  // git
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  // theme
+  "workbench.list.smoothScrolling": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {
+    "*.ipynb": "default",
+    "*.html": "default"
+  },
+  "workbench.colorCustomizations": {
+    "minimap.background": "#00000000",
+    "minimap.foregroundOpacity": "#000000c0"
+  },
+  // leetcode
+  "leetcode.endpoint": "leetcode-cn",
+  "leetcode.workspaceFolder": "/home/lzy/Desktop/project/leetcode-topic/leetcode",
+  // wechat
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript"
+  },
+  "emmet.includeLanguages": {
+    "wxml": "html"
+  },
+  // rust
+  "rust-analyzer.inlayHints.typeHints.enable": true,
+  "rust-analyzer.inlayHints.renderColons": true,
+  "rust-analyzer.inlayHints.parameterHints.enable": true,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": true,
+  "html.format.indentHandlebars": true,
+  "editor.cursorBlinking": "expand",
+  "gitlens.plusFeatures.enabled": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "leetcode.defaultLanguage": "typescript",
+  "leetcode.useWsl": true,
+  "leetcode.filePath": {
+    "default": {
+      "folder": "",
+      "filename": "${id}.${kebab-case-name}.${ext}"
+    }
+  },
+  "leetcode.hint.configWebviewMarkdown": false,
+  "remote.SSH.configFile": "C:\\Users\\lzy\\.ssh\\config",
+  "remote.SSH.remotePlatform": {
+    "43.143.53.107": "linux"
+  },
+  "editor.renderLineHighlight": "all",
+  "workbench.colorTheme": "Mariana Pro (Gray)",
+  "search.followSymlinks": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.external.linuxExec": "zsh",
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "codeium.enableConfig": {
+    "*": true
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "explorer.confirmDragAndDrop": false,
+  "markdown-preview-enhanced.codeBlockTheme": "auto.css",
+  "remote.autoForwardPorts": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.tree.enableStickyScroll": true,
+  "sonarlint.connectedMode.connections.sonarqube": [
+    {
+      "serverUrl": "http://localhost:9000",
+      "connectionId": "http-localhost-9000-"
+    }
+  ],
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": -1,
+  "gitlens.views.commitDetails.files.layout": "list",
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+  "editor.inlineSuggest.showToolbar": "onHover",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.dragAndDrop": false,
+  "vitest.enable": true
+}
