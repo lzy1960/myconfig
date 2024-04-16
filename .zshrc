@@ -82,7 +82,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#999,bold,underline"
 
 source $ZSH/oh-my-zsh.sh
 
