@@ -26,6 +26,18 @@
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```
 
+### powershell 配置
+
+[powershell-settings.json](https://github.com/lzy1960/myconfig/blob/main/powershell-settings.json)
+
+```bash
+# 文件名中带hash值
+# 方法参考：https://stackoverflow.com/questions/64030699/where-is-settings-json-for-powershell-configuration-in-windows-terminal
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/powershell-settings.json" -OutFile "$(Get-Item ("C:\users\\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json")).FullName"
+```
+
+## Oh My Posh
+
 ### powershell 启动配置
 
 [Microsoft.PowerShell_profile.ps1](https://github.com/lzy1960/myconfig/blob/main/Microsoft.PowerShell_profile.ps1)
@@ -35,18 +47,6 @@ Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-sett
 ```bash
 # 如果报错Invoke-WebRequest: Could not find a part of the path 'xxx'，则先检查$PROFILE的前置目录是否存在
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/Microsoft.PowerShell_profile.ps1" -OutFile "$PROFILE"
-```
-
-## Oh My Posh
-
-### powershell 配置
-
-[Microsoft.PowerShell_profile.ps1](https://github.com/lzy1960/myconfig/blob/main/Microsoft.PowerShell_profile.ps1)
-
-```bash
-# 文件名中带hash值
-# 方法参考：https://stackoverflow.com/questions/64030699/where-is-settings-json-for-powershell-configuration-in-windows-terminal
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/Microsoft.PowerShell_profile.ps1" -OutFile "$(Get-Item ("C:\users\\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json")).FullName"
 ```
 
 ## Oh My Zsh
