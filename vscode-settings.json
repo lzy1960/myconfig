@@ -39,8 +39,6 @@
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // editor
-  "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "off",
@@ -56,6 +54,7 @@
   "editor.guides.bracketPairs": "active",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
+  "editor.fontWeight": 600,
   "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.stickyScroll.enabled": true,
@@ -69,7 +68,11 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-  "eslint.validate": ["javascript", "vue", "html"],
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "html"
+  ],
   // terminal
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
@@ -116,7 +119,7 @@
     // "background.repeat": "no-repeat",
     // "background-size": "cover",
     // 设置透明度
-    "opacity": 0.2
+    "opacity": 0.2,
   },
   // spell
   "cSpell.userWords": [
@@ -157,8 +160,6 @@
   // git
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  // theme
-  "workbench.list.smoothScrolling": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.ipynb": "default",
@@ -166,8 +167,32 @@
   },
   "workbench.colorCustomizations": {
     "minimap.background": "#00000000",
-    "minimap.foregroundOpacity": "#000000c0"
+    "minimap.foregroundOpacity": "#000000c0",
+    "editor.background": "#1d1d1d",
+    "sideBar.background": "#1d1d1d",
+    "tab.inactiveBackground": "#1d1d1d",
+    "tab.activeBorder": "#1d1d1d",
+    "tab.hoverBackground": "#333",
+    "tab.activeBackground": "#333",
+    "activityBar.background": "#1d1d1d", // 侧边栏
+    "editorWidget.background": "#1d1d1d33",
+    "menu.background": "#00000000",
+    "toolbar.hoverBackground": "#444",
+    "widget.shadow": "#666",
+    "scrollbar.shadow": "#666",
+    "scrollbarSlider.background": "#33333366",
+    "editorStickyScroll.background": "#33333333",
+    "editorStickyScroll.shadow": "#66666666",
+    "list.activeSelectionBackground": "#333",
+    "list.hoverBackground": "#444",
+    "list.inactiveSelectionBackground": "#333",
+    "input.background": "#222",
+    "editorGroupHeader.tabsBackground": "#222",
+    "notifications.background": "#33333333",
+    "settings.rowHoverBackground": "#333",
   },
+  "workbench.activityBar.location": "default",
+  "workbench.activityBar.iconClickBehavior": "focus",
   // leetcode
   "leetcode.endpoint": "leetcode-cn",
   "leetcode.workspaceFolder": "/home/lzy/Desktop/project/leetcode-topic/leetcode",
@@ -216,7 +241,8 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "codeium.enableConfig": {
-    "*": true
+    "*": true,
+    "markdown": true
   },
   "editor.unicodeHighlight.nonBasicASCII": false,
   "explorer.confirmDragAndDrop": false,
@@ -224,19 +250,26 @@
   "remote.autoForwardPorts": false,
   "remote.autoForwardPortsSource": "hybrid",
   "workbench.tree.enableStickyScroll": true,
-  "sonarlint.connectedMode.connections.sonarqube": [
-    {
-      "serverUrl": "http://localhost:9000",
-      "connectionId": "http-localhost-9000-"
-    }
-  ],
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": -1,
   "gitlens.views.commitDetails.files.layout": "list",
   "gitlens.ai.experimental.provider": "openai",
   "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
   "editor.inlineSuggest.showToolbar": "onHover",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.dragAndDrop": false,
-  "vitest.enable": true
+  "redhat.telemetry.enabled": true,
+  "apc.font.family": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
+  "apc.monospace.font.family": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
+  "apc.stylesheet": {
+    "*": {
+      "transition": "margin 0.1s ease-in-out, padding 0.1s ease-in-out, top 0.1s ease-in-out, left 0.1s ease-in-out, background 0.2s ease-in-out",
+    },
+    ".context-view": "transition: top 0.02s ease-in-out, left 0.02s ease-in-out",
+    ".lines-content": "transition: top 0.02s ease-in-out, left 0.02s ease-in-out",
+    ".monaco-list-rows": "transition: top 0.02s ease-in-out",
+    ".monaco-editor > .overflow-guard .margin": "transition: top 0.02s ease-in-out",
+    ".split-view-view.visible": "transition: top 0s, height 0s",
+    ".monaco-sash": "transition: top 0s",
+    ".sticky-widget, .overflowingContentWidgets > div, .quick-input-widget, .notification-toast, .context-view, .editor-widget.visible, .monaco-dialog-box, .monaco-aria-container, .monaco-menu-container, .action-widget": "background: #00000000; backdrop-filter: blur(8px);"  },
+  "terminal.integrated.smoothScrolling": true,
 }
