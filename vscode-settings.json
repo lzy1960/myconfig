@@ -39,7 +39,6 @@
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.quickSuggestions": {
@@ -176,7 +175,7 @@
     "tab.activeBackground": "#333",
     "activityBar.background": "#1d1d1d", // 侧边栏
     "editorWidget.background": "#1d1d1d33",
-    "menu.background": "#00000000",
+    // "menu.background": "#000000",
     "toolbar.hoverBackground": "#444",
     "widget.shadow": "#666",
     "scrollbar.shadow": "#666",
@@ -270,6 +269,8 @@
     ".monaco-editor > .overflow-guard .margin": "transition: top 0.02s ease-in-out",
     ".split-view-view.visible": "transition: top 0s, height 0s",
     ".monaco-sash": "transition: top 0s",
-    ".sticky-widget, .overflowingContentWidgets > div, .quick-input-widget, .notification-toast, .context-view, .editor-widget.visible, .monaco-dialog-box, .monaco-aria-container, .monaco-menu-container, .action-widget": "background: #00000000; backdrop-filter: blur(8px);"  },
+    ".sticky-widget, .overflowingContentWidgets > div, .quick-input-widget, .notification-toast, .context-view, .editor-widget.visible, .monaco-dialog-box, .monaco-aria-container, .monaco-menu, .monaco-menu-container, .action-widget, .menu": "background: #00000000; backdrop-filter: blur(8px);"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
   "terminal.integrated.smoothScrolling": true,
 }
