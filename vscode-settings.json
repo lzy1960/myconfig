@@ -69,7 +69,11 @@
   "eslint.codeAction.showDocumentation": {
     "enable": true
   },
-  "eslint.validate": ["javascript", "vue", "html"],
+  "eslint.validate": [
+    "javascript",
+    "vue",
+    "html"
+  ],
   // terminal
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
@@ -238,5 +242,10 @@
   "editor.inlineSuggest.showToolbar": "onHover",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.dragAndDrop": false,
+  // 用于解决 wsl 中 node 进程内存占用过高的问题
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+  },
   "vitest.enable": true
 }
