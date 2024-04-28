@@ -22,6 +22,9 @@
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+> [!WARNING]  
+> MacOS 系统中，apc 插件的效果并不理想，苹果用户需要删除 `apc.xxx` 相关的配置，并自行调整`workbench.colorCustomizations`中的透明内容
+
 ```bash
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```

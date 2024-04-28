@@ -20,6 +20,9 @@ Use the [noMeiryoUI](https://github.com/Tatsu-syo/noMeiryoUI/releases) tool to m
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+> [!WARNING]
+> In MacOS system, the effect of apc plug-in is not ideal. Apple users need to delete the configuration related to `apc.xxx` and adjust the transparent content in `workbench.colorCustomizations` by themselves.
+
 ```bash
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```
