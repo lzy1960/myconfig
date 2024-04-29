@@ -29,11 +29,11 @@ success_symbol = '[➜](bold green)'
 error_symbol = '[✗](bold red)'
 
 [package]
-symbol = '📦'
-format = '[ $symbol$version](208 bold) '
+symbol = '󰏗'
+format = '[$symbol $version](208 bold) '
 
 [cmd_duration]
-format = '[ ⏱  $duration]($style)'
+format = '[ 󰔚 $duration]($style)'
 style = 'bold cyan'
 
 [fill]
@@ -43,7 +43,7 @@ symbol = ' '
 show_always = true
 style_user = "fg:#a3aed2 bg:#517598"
 style_root = "fg:#a3aed2 bg:#517598"
-format = '[ 󰀄 $user ]($style)'
+format = '[  $user ]($style)'
 disabled = false
 
 [memory_usage]
@@ -53,7 +53,7 @@ style = 'bold dimmed green fg:green'
 format = '[ ${ram}( | ${swap}) ]($style) '
 
 [directory]
-truncation_symbol = " "
+truncation_symbol = " "
 truncation_length = 10
 truncate_to_repo = true
 style = "fg:#e3e5e5 bg:#769ff0"
@@ -66,16 +66,16 @@ format = "[ $path ]($style)"
 "Pictures" = " "
 
 [git_branch]
-symbol = ""
+symbol = ""
 style = "bg:#394260"
 format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 
 [git_status]
 style = "bg:#394260"
-format = '[[ ($all_status$ahead_behind) ](fg:#769ff0 bg:#394260)]($style)'
+format = '[[($all_status$ahead_behind) ](fg:#769ff0 bg:#394260)]($style)'
 
 [nodejs]
-symbol = "󰎙"
+symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 

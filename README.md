@@ -64,6 +64,7 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/lzy1960/myconfig/main/.zshrc
 ### starship 配置
 
 需要先安装 starship，请参考：https://starship.rs/guide/#%F0%9F%9A%80-installation
+
 [starship.toml](https://github.com/lzy1960/myconfig/blob/main/starship.toml)
 
 ```bash
