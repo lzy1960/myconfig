@@ -1,0 +1,43 @@
+* {
+  transition: margin 0.1s ease-in-out, padding 0.1s ease-in-out,
+    top 0.1s ease-in-out, left 0.1s ease-in-out, background 0.2s ease-in-out;
+}
+.context-view {
+  transition: top 0s, left 0s;
+}
+.lines-content {
+  transition: top 0.02s ease-in-out, left 0.02s ease-in-out;
+}
+.monaco-list-rows {
+  transition: top 0.02s ease-in-out;
+}
+.monaco-editor > .overflow-guard .margin {
+  transition: top 0.02s ease-in-out;
+}
+.split-view-view.visible {
+  transition: top 0s, height 0s;
+}
+.monaco-sash {
+  transition: top 0s;
+}
+.sticky-widget,
+.overflowingContentWidgets > div,
+.quick-input-widget,
+.notification-toast,
+.context-view,
+.editor-widget.visible,
+.monaco-dialog-box,
+.monaco-aria-container,
+.monaco-menu-container,
+.action-widget,
+.shadow-root-host .monaco-menu-container {
+  background: #00000000;
+  backdrop-filter: blur(8px);
+}
+
+/* 以下是侧边栏的右键菜单 */
+html body .monaco-workbench .monaco-action-bar .vertical {
+    background: #222;
+    /* 毛玻璃为什么不生效？ */
+    backdrop-filter: blur(8px) !important;
+}

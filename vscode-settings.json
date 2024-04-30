@@ -175,7 +175,7 @@
     "tab.activeBackground": "#333",
     "activityBar.background": "#1d1d1d", // 侧边栏
     "editorWidget.background": "#1d1d1d33",
-    // "menu.background": "#00000033",
+    "menu.background": "#00000033",
     "toolbar.hoverBackground": "#444",
     "widget.shadow": "#666",
     "scrollbar.shadow": "#666",
@@ -257,19 +257,13 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.dragAndDrop": false,
   "redhat.telemetry.enabled": true,
-  "apc.font.family": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
-  "apc.monospace.font.family": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
-  "apc.stylesheet": {
-    "*": {
-      "transition": "margin 0.1s ease-in-out, padding 0.1s ease-in-out, top 0.1s ease-in-out, left 0.1s ease-in-out, background 0.2s ease-in-out",
-    },
-    ".context-view": "transition: top 0.02s ease-in-out, left 0.02s ease-in-out",
-    ".lines-content": "transition: top 0.02s ease-in-out, left 0.02s ease-in-out",
-    ".monaco-list-rows": "transition: top 0.02s ease-in-out",
-    ".monaco-editor > .overflow-guard .margin": "transition: top 0.02s ease-in-out",
-    ".split-view-view.visible": "transition: top 0s, height 0s",
-    ".monaco-sash": "transition: top 0s",
-    ".sticky-widget, .overflowingContentWidgets > div, .quick-input-widget, .notification-toast, .context-view, .editor-widget.visible, .monaco-dialog-box, .monaco-aria-container, .monaco-menu-container, .action-widget, .menu": "background: #00000000; backdrop-filter: blur(8px);"
+  // https://github.com/drcika/apc-extension/issues/103#issuecomment-1905436739
+  "apc.imports": [
+    "${userHome}/.vscode/userscripts.js",
+    "${userHome}/.vscode/userstyles.css",
+  ],
+  "apc.statusBar": {
+    "position": "editor-bottom",
   },
   "editor.cursorSmoothCaretAnimation": "on",
   "terminal.integrated.smoothScrolling": true,
