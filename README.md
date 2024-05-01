@@ -29,6 +29,14 @@
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```
 
+另外，由于配置中引入了外部 js 和 css，需要将二者下载到本地：
+
+```bash
+# 将 userscripts.js 和 userstyles.css 下载到本地
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userscripts.js" -OutFile "C:\users\\$env:UserName\\.vscode\\userscripts.js"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userstyles.css" -OutFile "C:\users\\$env:UserName\\.vscode\\userstyles.css"
+```
+
 ### powershell 配置
 
 [powershell-settings.json](https://github.com/lzy1960/myconfig/blob/main/powershell-settings.json)
