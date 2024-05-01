@@ -20,7 +20,7 @@ Use the [noMeiryoUI](https://github.com/Tatsu-syo/noMeiryoUI/releases) tool to m
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
-```bash
+```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```
 
@@ -30,7 +30,7 @@ Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-sett
 
 Some plug-ins need to be installed, please refer to the detailed tutorial: https://github.com/lzy1960/powershell-config
 
-```bash
+```powershell
 # If the error Invoke-WebRequest: Could not find a part of the path 'xxx' is reported, first check whether the front directory of $PROFILE exists.
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/Microsoft.PowerShell_profile.ps1" -OutFile "$PROFILE"
 ```
@@ -41,7 +41,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/
 
 [Microsoft.PowerShell_profile.ps1](https://github.com/lzy1960/myconfig/blob/main/Microsoft.PowerShell_profile.ps1)
 
-```bash
+```powershell
 # File name with hash value
 # Method reference: https://stackoverflow.com/questions/64030699/where-is-settings-json-for-powershell-configuration-in-windows-terminal
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/Microsoft.PowerShell_profile.ps1" -OutFile "$(Get-Item ("C:\users\\$env:UserName\AppData \Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json")).FullName"
@@ -67,4 +67,10 @@ You need to install starship first, please refer to: https://starship.rs/guide/#
 
 ```bash
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/lzy1960/myconfig/main/starship.toml
+```
+
+If windows also needs to be configured with starship, the script is as follows:
+
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/starship.toml" -OutFile "C:\users\\$env:UserName\\.config\\starship.toml"
 ```

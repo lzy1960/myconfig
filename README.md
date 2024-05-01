@@ -22,7 +22,7 @@
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
-```bash
+```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
 ```
 
@@ -30,7 +30,7 @@ Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-sett
 
 [powershell-settings.json](https://github.com/lzy1960/myconfig/blob/main/powershell-settings.json)
 
-```bash
+```powershell
 # 文件名中带hash值
 # 方法参考：https://stackoverflow.com/questions/64030699/where-is-settings-json-for-powershell-configuration-in-windows-terminal
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/powershell-settings.json" -OutFile "$(Get-Item ("C:\users\\$env:UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_*\LocalState\settings.json")).FullName"
@@ -44,7 +44,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/
 
 需要安装一些插件，详细教程参考：https://github.com/lzy1960/powershell-config
 
-```bash
+```powershell
 # 如果报错Invoke-WebRequest: Could not find a part of the path 'xxx'，则先检查$PROFILE的前置目录是否存在
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/Microsoft.PowerShell_profile.ps1" -OutFile "$PROFILE"
 ```
@@ -69,4 +69,10 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/lzy1960/myconfig/main/.zshrc
 
 ```bash
 curl -o ~/.config/starship.toml https://raw.githubusercontent.com/lzy1960/myconfig/main/starship.toml
+```
+
+如果 windows 也要配置了 starship，脚本如下：
+
+```powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/starship.toml" -OutFile "C:\users\\$env:UserName\\.config\\starship.toml"
 ```
