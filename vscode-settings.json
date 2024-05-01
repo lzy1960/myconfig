@@ -39,9 +39,6 @@
   "[less]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // editor
-  "editor.smoothScrolling": true,
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.quickSuggestions": {
@@ -56,6 +53,7 @@
   "editor.guides.bracketPairs": "active",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "'UbuntuSansMono Nerd Font Semibold', 'Sarasa Term SC Semibold'",
+  "editor.fontWeight": 600,
   "editor.fontSize": 16,
   "editor.fontLigatures": true,
   "editor.stickyScroll.enabled": true,
@@ -120,7 +118,7 @@
     // "background.repeat": "no-repeat",
     // "background-size": "cover",
     // 设置透明度
-    "opacity": 0.2
+    "opacity": 0.2,
   },
   // spell
   "cSpell.userWords": [
@@ -161,8 +159,6 @@
   // git
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  // theme
-  "workbench.list.smoothScrolling": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.ipynb": "default",
@@ -170,8 +166,32 @@
   },
   "workbench.colorCustomizations": {
     "minimap.background": "#00000000",
-    "minimap.foregroundOpacity": "#000000c0"
+    "minimap.foregroundOpacity": "#000000c0",
+    "editor.background": "#1d1d1d",
+    "sideBar.background": "#1d1d1d",
+    "tab.inactiveBackground": "#1d1d1d",
+    "tab.activeBorder": "#1d1d1d",
+    "tab.hoverBackground": "#333",
+    "tab.activeBackground": "#333",
+    "activityBar.background": "#1d1d1d", // 侧边栏
+    "editorWidget.background": "#1d1d1d33",
+    "menu.background": "#00000033",
+    "toolbar.hoverBackground": "#444",
+    "widget.shadow": "#666",
+    "scrollbar.shadow": "#666",
+    "scrollbarSlider.background": "#33333366",
+    "editorStickyScroll.background": "#33333333",
+    "editorStickyScroll.shadow": "#66666666",
+    "list.activeSelectionBackground": "#333",
+    "list.hoverBackground": "#444",
+    "list.inactiveSelectionBackground": "#333",
+    "input.background": "#222",
+    "editorGroupHeader.tabsBackground": "#222",
+    "notifications.background": "#33333333",
+    "settings.rowHoverBackground": "#333",
   },
+  "workbench.activityBar.location": "default",
+  "workbench.activityBar.iconClickBehavior": "focus",
   // leetcode
   "leetcode.endpoint": "leetcode-cn",
   "leetcode.workspaceFolder": "/home/lzy/Desktop/project/leetcode-topic/leetcode",
@@ -220,7 +240,8 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "codeium.enableConfig": {
-    "*": true
+    "*": true,
+    "markdown": true
   },
   "editor.unicodeHighlight.nonBasicASCII": false,
   "explorer.confirmDragAndDrop": false,
@@ -228,14 +249,7 @@
   "remote.autoForwardPorts": false,
   "remote.autoForwardPortsSource": "hybrid",
   "workbench.tree.enableStickyScroll": true,
-  "sonarlint.connectedMode.connections.sonarqube": [
-    {
-      "serverUrl": "http://localhost:9000",
-      "connectionId": "http-localhost-9000-"
-    }
-  ],
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": -1,
   "gitlens.views.commitDetails.files.layout": "list",
   "gitlens.ai.experimental.provider": "openai",
   "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
@@ -247,5 +261,15 @@
     "**/.git/objects/**": true,
     "**/node_modules/**": true,
   },
-  "vitest.enable": true
+  "redhat.telemetry.enabled": true,
+  // https://github.com/drcika/apc-extension/issues/103#issuecomment-1905436739
+  "apc.imports": [
+    "${userHome}/.vscode/userscripts.js",
+    "${userHome}/.vscode/userstyles.css",
+  ],
+  "apc.statusBar": {
+    "position": "editor-bottom",
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.smoothScrolling": true,
 }

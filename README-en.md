@@ -20,8 +20,19 @@ Use the [noMeiryoUI](https://github.com/Tatsu-syo/noMeiryoUI/releases) tool to m
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+> [!WARNING]
+> In MacOS system, the effect of apc plug-in is not ideal. Apple users need to delete the configuration related to `apc.xxx` and adjust the transparent content in `workbench.colorCustomizations` by themselves.
+
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
+```
+
+In addition, since external js and css are introduced in the configuration, they need to be downloaded locally:
+
+```powershell
+# Download userscripts.js and userstyles.css to local
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/userscripts.js" -OutFile "C:\users\\$env:UserName\\.vscode\\userscripts.js"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/userstyles.css" -OutFile "C:\users\\$env:UserName\\.vscode\\userstyles.css"
 ```
 
 ### powershell startup configuration

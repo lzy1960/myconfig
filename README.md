@@ -22,8 +22,19 @@
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+> [!WARNING]  
+> MacOS 系统中，apc 插件的效果并不理想，苹果用户需要删除 `apc.xxx` 相关的配置，并自行调整`workbench.colorCustomizations`中的透明内容
+
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
+```
+
+另外，由于配置中引入了外部 js 和 css，需要将二者下载到本地：
+
+```powershell
+# 将 userscripts.js 和 userstyles.css 下载到本地
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userscripts.js" -OutFile "C:\users\\$env:UserName\\.vscode\\userscripts.js"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userstyles.css" -OutFile "C:\users\\$env:UserName\\.vscode\\userstyles.css"
 ```
 
 ### powershell 配置
