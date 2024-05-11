@@ -1,7 +1,9 @@
+/* ================== 毛玻璃与动画相关样式 start ================== */
 * {
   transition-timing-function: ease-in-out;
-  transition: margin 0.1s, padding 0.1s,
-    top 0.3s cubic-bezier(0.00, 0.90, 0.08, 1.20), left 0.1s, background 0.2s;
+  transition: all 0.5s cubic-bezier(0, 0.9, 0.08, 1.2), margin 0.1s,
+    padding 0.1s, top 0.3s cubic-bezier(0, 0.9, 0.08, 1.2), left 0.1s,
+    background 0.2s;
 }
 .context-view {
   transition: top 0s, left 0s;
@@ -10,7 +12,7 @@
   transition: top 0.02s, left 0.02s;
 }
 .monaco-list-rows {
-  transition: top 0.02s;
+  transition: top 0.05s;
 }
 .monaco-editor > .overflow-guard .margin {
   transition: top 0.1s;
@@ -32,13 +34,91 @@
 .monaco-menu-container,
 .action-widget,
 .shadow-root-host .monaco-menu-container {
-  background: #00000000;
-  backdrop-filter: blur(8px);
+  background: #00000000 !important;
+  backdrop-filter: blur(6px) !important;
 }
 
 /* 以下是侧边栏的右键菜单 */
 html body .monaco-workbench .monaco-action-bar .vertical {
   background: #222;
   /* 毛玻璃为什么不生效？ */
-  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(6px) !important;
 }
+/* ================== 毛玻璃与动画相关样式 end ================== */
+
+/* ================== 其他样式 start ================== */
+.statusbar-item.remote-kind {
+  border-radius: 20px;
+}
+
+.titlebar {
+  .titlebar-center {
+    .monaco-action-bar {
+      .action-item {
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+
+.activitybar.left {
+  & > .content {
+    width: 40px !important;
+    .monaco-action-bar {
+      .action-item {
+        border-radius: 50%;
+        margin: 4px 0;
+        background-color: rgba(255, 255, 255, 0.05);
+        transform: scale(0.8);
+        .action-label {
+          width: 40px;
+          height: 40px;
+          &.codicon {
+            font-size: 20px !important;
+          }
+          &:not(.codicon) {
+            padding: 0;
+          }
+        }
+        .badge {
+          .badge-content {
+            background-color: transparent !important;
+            color: #6699cc !important;
+            text-shadow: 0 0 6px #6699cc;
+            font-size: 14px;
+            font-weight: bold;
+            right: 0;
+          }
+        }
+        &.checked {
+          .action-label {
+            text-shadow: 0 0 6px #6699cc;
+            color: #6699cc !important;
+            &.uri-icon {
+              background-color: #6699cc !important;
+            }
+          }
+          .active-item-indicator::before {
+            border-left-color: transparent !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container {
+  & > .tab {
+    border-radius: 10px;
+    & > .tab-actions .action-label.codicon {
+      border-radius: 50%;
+    }
+  }
+}
+/* ================== 其他样式 end ================== */
