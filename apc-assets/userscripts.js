@@ -63,10 +63,6 @@ function ContextmenuStylesheet() {
     background: #00000000;
     backdrop-filter: blur(8px);
 }
-.monaco-menu .action-label,
-.monaco-menu .action-menu-item  {
-    transition: all 0.2s ease-in-out;
-}
     `)
     return sheet
 }
