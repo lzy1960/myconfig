@@ -37,14 +37,51 @@
 .action-widget,
 .shadow-root-host .monaco-menu-container {
   background: #00000000 !important;
-  backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
 /* 以下是侧边栏的右键菜单 */
 html body .monaco-workbench .monaco-action-bar .vertical {
   background: #222;
   /* 毛玻璃为什么不生效？ */
-  backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Cursor */
+.cursor {
+  animation: jump 2s ease-in-out infinite, breath 3s ease infinite !important;
+  border-radius: 2px;
+  background-color: skyblue !important;
+  box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  overflow: visible !important;
+  transition-duration: 0.2s !important;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+  50% {
+    transform: translateY(20%);
+    height: 10px !important;
+  }
+  100% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+}
+
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
 }
 /* ================== 毛玻璃与动画相关样式 end ================== */
 
@@ -64,6 +101,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   }
 }
 
+/* 左侧标签 */
 .activitybar.left {
   & > .content {
     width: 40px !important;
@@ -110,6 +148,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   }
 }
 
+/* 工作区 */
 .monaco-workbench
   .part.editor
   > .content
@@ -121,6 +160,44 @@ html body .monaco-workbench .monaco-action-bar .vertical {
     & > .tab-actions .action-label.codicon {
       border-radius: 50%;
     }
+  }
+}
+
+.quick-input-widget {
+  --vscode-quickInput-background: transparent !important;
+  .focused {
+    --vscode-quickInputList-focusBackground: #ffffff11 !important;
+    border: 1px solid #ffffff22;
+  }
+}
+
+.monaco-inputbox {
+  --vscode-input-background: transparent !important;
+}
+
+.active-line-number {
+  --vscode-editorLineNumber-activeForeground: skyblue !important;
+  text-shadow: 0 0 20px skyblue;
+  animation: scaleIn 0.5s cubic-bezier(0.22, 1.32, 0.34, 1.1);
+  transform: scale(1.2);
+}
+
+.sticky-widget {
+  --vscode-editorStickyScroll-background: transparent !important;
+}
+
+.monaco-hover {
+  --vscode-editorHoverWidget-background: transparent !important;
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 /* ================== 其他样式 end ================== */
