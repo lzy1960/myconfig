@@ -7,7 +7,7 @@
   transition: top 0s, left 0s;
 }
 .lines-content {
-  transition: top 0.02s, left 0.02s;
+  transition: top 0.05s ease-out, left 0.05s ease-out;
 }
 .monaco-list-rows {
   transition: top 0.05s;
