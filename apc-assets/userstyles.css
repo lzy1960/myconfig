@@ -49,7 +49,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 
 /* Cursor */
 .cursor {
-  animation: jump 2s ease-in-out infinite, breath 3s ease infinite !important;
+  animation: jump 2s ease-in-out infinite, breath 1s ease infinite !important;
   border-radius: 2px;
   background-color: skyblue !important;
   box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
