@@ -187,7 +187,7 @@
     "list.inactiveSelectionBackground": "#333",
     "input.background": "#222",
     "editorGroupHeader.tabsBackground": "#222",
-    "notifications.background": "#33333333",
+    "notifications.background": "#00000000",
     "settings.rowHoverBackground": "#333",
   },
   "workbench.activityBar.location": "default",
