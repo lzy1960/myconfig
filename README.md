@@ -4,6 +4,12 @@
 
 [English](https://github.com/lzy1960/myconfig/blob/main/README-en.md)
 
+## 效果展示
+
+![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
+
+![image](https://github.com/lzy1960/myconfig/assets/40552111/ed34b5d4-c569-469b-99f9-675089d96b14)
+
 ## 系统字体
 
 前置：
