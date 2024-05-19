@@ -1,12 +1,16 @@
-# 我的个人配置
+<div align="center">
 
-> 附一键替换代码
+<h1>我的个人配置</h1>
 
-[English](https://github.com/lzy1960/myconfig/blob/main/README-en.md)
+<p>私人定制的 vscode 与 terminal 配置，使我爱上写代码 ✍️</p>
+
+$\color{#666}{\textsf{附一键替换代码}}$
+
+<a href="https://github.com/lzy1960/myconfig/blob/main/README-en.md" target="_blank">English</a>
+
+</div>
 
 ## 效果展示
-
-![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
 
 ![image](https://github.com/lzy1960/myconfig/assets/40552111/ed34b5d4-c569-469b-99f9-675089d96b14)
 
@@ -28,8 +32,17 @@
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+- 字体使用 [Sarasa UI SC (更纱黑体 UI SC)](https://github.com/be5invis/Sarasa-Gothic/releases)与[UbuntuSans](https://www.nerdfonts.com/font-downloads)，使中英文更加美观
+- 使用扩展程序 [Apc Customize UI++](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) 美化 UI 与交互
+- 全局过渡动画，部分场景拥有回弹效果，体验更加丝滑与灵动
+- 部分场景的的毛玻璃效果，例如右键菜单、粘性组件、通知组件等等
+- 部分场景添加了阴影效果，实现类霓虹效果，例如光标
+- 探索更多美化效果 🥰
+
+![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
+
 > [!WARNING]  
-> MacOS 系统中，apc 插件的效果并不理想，苹果用户需要删除 `apc.xxx` 相关的配置，并自行调整`workbench.colorCustomizations`中的透明内容
+> MacOS 系统中，apc 插件的效果并不理想，mac 用户需要删除 `apc.xxx` 相关的配置，并自行调整`workbench.colorCustomizations`中的透明内容
 
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"

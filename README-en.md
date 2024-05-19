@@ -1,10 +1,14 @@
-# My personal configuration
+<div align="center">
 
-> Attached is one-click replacement code
+<h1>My personal configuration</h1>
+
+<p>Personalized vscode and terminal configuration make me fall in love with writing code ✍️</p>
+
+$\color{#666}{\textsf{Attached is one-click replacement code}}$
+
+</div>
 
 ## Effect
-
-![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
 
 ![image](https://github.com/lzy1960/myconfig/assets/40552111/ed34b5d4-c569-469b-99f9-675089d96b14)
 
@@ -26,8 +30,17 @@ Use the [noMeiryoUI](https://github.com/Tatsu-syo/noMeiryoUI/releases) tool to m
 
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
+- Use [Sarasa UI SC (更纱黑体 UI SC)](https://github.com/be5invis/Sarasa-Gothic/releases) and [UbuntuSans](https://www.nerdfonts.com/font-downloads) as fonts to make Chinese and English more beautiful
+- Use the extension [Apc Customize UI++](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) to beautify UI and interaction
+- Global transition animation, some scenes have rebound effect, experience more smooth and smart
+- Frosted glass effect in some scenes, such as right-click menu, sticky components, notification components, etc.
+- Add shadow effect to some scenes to achieve neon-like effect, such as cursor
+- Explore more beautification effects 🥰
+
+![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
+
 > [!WARNING]
-> In MacOS system, the effect of apc plug-in is not ideal. Apple users need to delete the configuration related to `apc.xxx` and adjust the transparent content in `workbench.colorCustomizations` by themselves.
+> In MacOS system, the effect of apc plug-in is not ideal. Mac users need to delete the configuration related to `apc.xxx` and adjust the transparent content in `workbench.colorCustomizations` by themselves.
 
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
