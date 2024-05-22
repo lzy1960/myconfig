@@ -16,10 +16,10 @@
   transition: top 0.1s;
 }
 .split-view-view {
-  transition: width 0.5s, top 0.5s, height 0.5s, left 0.5s;
+  transition: top 0.5s, height 0.5s;
   transition-timing-function: cubic-bezier(0.22, 1.32, 0.34, 1.1) !important;
   &.visible {
-    transition: width 0.5s, left 0.5s, top 0s, height 0s;
+    transition: top 0s, height 0s;
   }
 }
 .monaco-sash {
