@@ -16,10 +16,10 @@
   transition: top 0.1s;
 }
 .split-view-view {
-  transition: width 0.5s, top 0.5s, height 0.5s, left 0.5s;
+  transition: top 0.5s, height 0.5s;
   transition-timing-function: cubic-bezier(0.22, 1.32, 0.34, 1.1) !important;
   &.visible {
-    transition: width 0.5s, left 0.5s, top 0s, height 0s;
+    transition: top 0s, height 0s;
   }
 }
 .monaco-sash {
@@ -101,17 +101,6 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 /* ================== 其他样式 start ================== */
 .statusbar-item.remote-kind {
   border-radius: 20px;
-}
-
-.titlebar {
-  .titlebar-center {
-    .monaco-action-bar {
-      .action-item {
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.05);
-      }
-    }
-  }
 }
 
 /* 左侧标签 */
