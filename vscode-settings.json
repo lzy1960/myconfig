@@ -183,7 +183,6 @@
     "editorStickyScroll.background": "#33333333",
     "editorStickyScroll.shadow": "#66666666",
     "list.activeSelectionBackground": "#333",
-    "list.hoverBackground": "#444",
     "list.inactiveSelectionBackground": "#333",
     "input.background": "#222",
     "editorGroupHeader.tabsBackground": "#222",
