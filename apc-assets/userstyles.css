@@ -36,7 +36,8 @@
 .monaco-aria-container,
 .monaco-menu-container,
 .action-widget,
-.shadow-root-host .monaco-menu-container {
+.shadow-root-host .monaco-menu-container,
+.monaco-hover {
   background: #00000000 !important;
   backdrop-filter: blur(8px) !important;
 }
