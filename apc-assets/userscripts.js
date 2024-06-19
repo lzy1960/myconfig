@@ -60,7 +60,7 @@ function ContextmenuStylesheet() {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: #00000000;
+    background: #00000001;
     backdrop-filter: blur(8px);
 }
     `)
