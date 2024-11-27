@@ -20,7 +20,7 @@
   transition: top 0.5s, height 0.5s;
   transition-timing-function: cubic-bezier(0.22, 1.32, 0.34, 1.1) !important;
   &.visible {
-    transition: top 0s, height 0s;
+    transition: top 0.5s, height 0.5s;
   }
 }
 .monaco-sash {
@@ -107,6 +107,16 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 }
 /* ================== 毛玻璃与动画相关样式 end ================== */
 
+/* ================== 字体 start ================== */
+.monaco-workbench .part > .title,.content,.items-container {
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+}
+
+.notifications-toasts {
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+}
+/* ================== 字体 end ================== */
+
 /* ================== 其他样式 start ================== */
 .statusbar-item.remote-kind {
   border-radius: 20px;
@@ -160,16 +170,13 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 }
 
 /* 工作区 */
-.monaco-workbench
-  .part.editor
-  > .content
-  .editor-group-container
-  > .title
-  .tabs-container {
-  & > .tab {
-    border-radius: 10px;
-    & > .tab-actions .action-label.codicon {
-      border-radius: 50%;
+.monaco-workbench .part.editor > .content .editor-group-container {
+  & > .title .tabs-container {
+    & > .tab {
+      border-radius: 10px;
+      & > .tab-actions .action-label.codicon {
+        border-radius: 50%;
+      }
     }
   }
 }
