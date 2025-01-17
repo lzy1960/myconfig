@@ -33,16 +33,13 @@ $\color{#666}{\textsf{附一键替换代码}}$
 [vscode-settings.json](https://github.com/lzy1960/myconfig/blob/main/vscode-settings.json)
 
 - 字体使用 [Sarasa UI SC (更纱黑体 UI SC)](https://github.com/be5invis/Sarasa-Gothic/releases)与[UbuntuSans](https://www.nerdfonts.com/font-downloads)，使中英文更加美观
-- 使用扩展程序 [Apc Customize UI++](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) 美化 UI 与交互
+- 使用扩展程序 [Custom CSS and JS Loader](https://github.com/be5invis/vscode-custom-css) 美化 UI 与交互
 - 全局过渡动画，部分场景拥有回弹效果，体验更加丝滑与灵动
 - 部分场景的的毛玻璃效果，例如右键菜单、粘性组件、通知组件等等
 - 部分场景添加了阴影效果，实现类霓虹效果，例如光标
 - 探索更多美化效果 🥰
 
 ![image](https://github.com/lzy1960/myconfig/assets/40552111/ab02510c-4fbf-4fe0-b3c7-cddfbd529f76)
-
-> [!WARNING]  
-> MacOS 系统中，apc 插件的效果并不理想，mac 用户需要删除 `apc.xxx` 相关的配置，并自行调整`workbench.colorCustomizations`中的透明内容
 
 ```powershell
 Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-settings.json" -OutFile "$env:APPDATA\Code\User\settings.json"
@@ -52,8 +49,8 @@ Invoke-WebRequest -Uri "https://github.com/lzy1960/myconfig/raw/main/vscode-sett
 
 ```powershell
 # 将 userscripts.js 和 userstyles.css 下载到本地
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userscripts.js" -OutFile "C:\users\\$env:UserName\\.vscode\\userscripts.js"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/apc-assets/userstyles.css" -OutFile "C:\users\\$env:UserName\\.vscode\\userstyles.css"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/vscode-custom-css-js/userscripts.js" -OutFile "C:\users\\$env:UserName\\.vscode\\userscripts.js"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/lzy1960/myconfig/main/vscode-custom-css-js/userstyles.css" -OutFile "C:\users\\$env:UserName\\.vscode\\userstyles.css"
 ```
 
 ### powershell 配置

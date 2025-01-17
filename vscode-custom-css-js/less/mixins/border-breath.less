@@ -1,0 +1,45 @@
+@main-color: #6699cc;
+@gradient: linear-gradient(120deg, @main-color, #8caf88, #c594c5, @main-color);
+
+// 定义一个 mixin 来封装样式
+.border-breath(@border-position: all) {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  animation: scrollBorder 2s infinite linear;
+
+  // 如果传入的是 'bottom'，则只应用下边框
+  & when (@border-position = bottom) {
+    border-bottom: 3px solid transparent;
+    border-image: @gradient;
+    border-image-slice: 1;
+  }
+
+  // 如果传入的是 'all'，则应用所有边框
+  & when (@border-position = all) {
+    border-top: 3px solid transparent !important;
+    border-right: 3px solid transparent !important;
+    border-bottom: 3px solid transparent !important;
+    border-left: 3px solid transparent !important;
+    border-image: @gradient;
+    border-image-slice: 1;
+  }
+}
+
+@keyframes scrollBorder {
+  0% {
+    border-image-source: @gradient;
+  }
+  50% {
+    border-image-source: linear-gradient(
+      120deg,
+      #c594c5,
+      @main-color,
+      @main-color,
+      #8caf88
+    );
+  }
+  100% {
+    border-image-source: @gradient;
+  }
+}

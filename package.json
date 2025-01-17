@@ -1,0 +1,15 @@
+{
+  "name": "myconfig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen:style": "bash ./scripts/compileStyle.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^4.2.1"
+  }
+}
