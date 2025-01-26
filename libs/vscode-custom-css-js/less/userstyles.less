@@ -1,14 +1,23 @@
+@import './mixins/border-breath.less';
+
 /* ================== 毛玻璃与动画相关样式 start ================== */
+@skyblue: skyblue;
+@blur-radius: 8px;
+@shadow-color: rgba(255, 255, 255, 0.2);
+@hover-background: #66666666;
+@main-color: #6699cc;
+@gradient: linear-gradient(120deg, @main-color, #8caf88, #c594c5, @main-color);
+
 * {
-  transition: margin 0.1s, padding 0.1s, top 0.3s, left 0.1s, background 0.5s,
-    box-shadow 0.5s;
-  transition-timing-function: cubic-bezier(0.22, 1.32, 0.34, 1.1);
+  transition: margin 0.1s, padding 0.1s, top 0.1s, left 0.1s, background 0.5s,
+    box-shadow 0.5s, opacity 0.2s, backdrop-filter 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .context-view {
   transition: top 0s, left 0s;
 }
 .lines-content {
-  transition: top 0.05s ease-out, left 0.05s ease-out;
+  transition: top 0.05s, left 0.05s;
 }
 .monaco-list-rows {
   transition: top 0.05s;
@@ -17,10 +26,9 @@
   transition: top 0.1s;
 }
 .split-view-view {
-  transition: top 0.5s, height 0.5s;
-  transition-timing-function: cubic-bezier(0.22, 1.32, 0.34, 1.1) !important;
+  transition: top 0.05s, left 0s, height 0.05s;
   &.visible {
-    transition: top 0.5s, height 0.5s;
+    transition: top 0.05s, left 0s, height 0.05s;
   }
 }
 .monaco-sash {
@@ -39,23 +47,22 @@
 .shadow-root-host .monaco-menu-container,
 .monaco-hover {
   background: #00000000 !important;
-  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(@blur-radius) !important;
 }
 
 /* 以下是侧边栏的右键菜单 */
 html body .monaco-workbench .monaco-action-bar .vertical {
   background: #222;
-  /* 毛玻璃为什么不生效？ */
-  backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(@blur-radius) !important;
 }
 
 .monaco-workbench > .notifications-toasts .notification-toast-container {
   .notification-toast {
-    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 0 6px 2px @shadow-color !important;
     .notifications-list-container {
       .monaco-list-row {
         &:hover {
-          background: #66666666 !important;
+          background: @hover-background !important;
         }
       }
     }
@@ -65,7 +72,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 .monaco-workbench .monaco-list-row {
   border-radius: 6px;
   &:hover {
-    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) inset;
+    box-shadow: 0 0 6px 2px @shadow-color inset;
   }
 }
 
@@ -73,7 +80,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 .cursor {
   animation: jump 2s ease-in-out infinite, breath 1s ease infinite !important;
   border-radius: 2px;
-  background-color: skyblue !important;
+  background-color: @skyblue !important;
   box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
   overflow: visible !important;
   transition-duration: 0.2s !important;
@@ -108,7 +115,9 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 /* ================== 毛玻璃与动画相关样式 end ================== */
 
 /* ================== 字体 start ================== */
-.monaco-workbench .part > .title,.content,.items-container {
+.monaco-workbench .part > .title,
+.content,
+.items-container {
   font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
 }
 
@@ -145,8 +154,8 @@ html body .monaco-workbench .monaco-action-bar .vertical {
         .badge {
           .badge-content {
             background-color: transparent !important;
-            color: #6699cc !important;
-            text-shadow: 0 0 6px #6699cc;
+            color: @main-color !important;
+            text-shadow: 0 0 6px @main-color;
             font-size: 14px;
             font-weight: bold;
             right: 0;
@@ -154,10 +163,10 @@ html body .monaco-workbench .monaco-action-bar .vertical {
         }
         &.checked {
           .action-label {
-            text-shadow: 0 0 6px #6699cc;
-            color: #6699cc !important;
+            text-shadow: 0 0 6px @main-color;
+            color: @main-color !important;
             &.uri-icon {
-              background-color: #6699cc !important;
+              background-color: @main-color !important;
             }
           }
           .active-item-indicator::before {
@@ -174,6 +183,10 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   & > .title .tabs-container {
     & > .tab {
       border-radius: 10px;
+      border-right-width: 0 !important;
+      &.active {
+        .border-breath(bottom);
+      }
       & > .tab-actions .action-label.codicon {
         border-radius: 50%;
       }
@@ -194,9 +207,9 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 }
 
 .active-line-number {
-  --vscode-editorLineNumber-activeForeground: skyblue !important;
-  text-shadow: 0 0 20px skyblue;
-  animation: scaleIn 0.5s cubic-bezier(0.22, 1.32, 0.34, 1.1);
+  --vscode-editorLineNumber-activeForeground: @skyblue !important;
+  text-shadow: 0 0 20px @skyblue;
+  animation: scaleIn 0.5s ease-in-out;
   transform: scale(1.2);
 }
 
@@ -215,7 +228,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 @keyframes scaleIn {
   0% {
     opacity: 0;
-    transform: scale(2);
+    transform: scale(2.5);
   }
   100% {
     opacity: 1;

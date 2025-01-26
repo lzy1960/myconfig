@@ -1,0 +1,209 @@
+@keyframes scrollBorder {
+  0% {
+    border-image-source: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+  }
+  50% {
+    border-image-source: linear-gradient(120deg, #c594c5, #6699cc, #6699cc, #8caf88);
+  }
+  100% {
+    border-image-source: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+  }
+}
+/* ================== 毛玻璃与动画相关样式 start ================== */
+* {
+  transition: margin 0.1s, padding 0.1s, top 0.1s, left 0.1s, background 0.5s, box-shadow 0.5s, opacity 0.2s, backdrop-filter 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.context-view {
+  transition: top 0s, left 0s;
+}
+.lines-content {
+  transition: top 0.05s, left 0.05s;
+}
+.monaco-list-rows {
+  transition: top 0.05s;
+}
+.monaco-editor > .overflow-guard .margin {
+  transition: top 0.1s;
+}
+.split-view-view {
+  transition: top 0.05s, left 0s, height 0.05s;
+}
+.split-view-view.visible {
+  transition: top 0.05s, left 0s, height 0.05s;
+}
+.monaco-sash {
+  transition: top 0s;
+}
+.sticky-widget,
+.overflowingContentWidgets > div,
+.quick-input-widget,
+.notification-toast,
+.context-view,
+.editor-widget.visible,
+.monaco-dialog-box,
+.monaco-aria-container,
+.monaco-menu-container,
+.action-widget,
+.shadow-root-host .monaco-menu-container,
+.monaco-hover {
+  background: #00000000 !important;
+  backdrop-filter: blur(8px) !important;
+}
+/* 以下是侧边栏的右键菜单 */
+html body .monaco-workbench .monaco-action-bar .vertical {
+  background: #222;
+  backdrop-filter: blur(8px) !important;
+}
+.monaco-workbench > .notifications-toasts .notification-toast-container .notification-toast {
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) !important;
+}
+.monaco-workbench > .notifications-toasts .notification-toast-container .notification-toast .notifications-list-container .monaco-list-row:hover {
+  background: #66666666 !important;
+}
+.monaco-workbench .monaco-list-row {
+  border-radius: 6px;
+}
+.monaco-workbench .monaco-list-row:hover {
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) inset;
+}
+/* Cursor */
+.cursor {
+  animation: jump 2s ease-in-out infinite, breath 1s ease infinite !important;
+  border-radius: 2px;
+  background-color: skyblue !important;
+  box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  overflow: visible !important;
+  transition-duration: 0.2s !important;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+  50% {
+    transform: translateY(20%);
+    height: 10px !important;
+  }
+  100% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+}
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+}
+/* ================== 毛玻璃与动画相关样式 end ================== */
+/* ================== 字体 start ================== */
+.monaco-workbench .part > .title,
+.content,
+.items-container {
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+}
+.notifications-toasts {
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+}
+/* ================== 字体 end ================== */
+/* ================== 其他样式 start ================== */
+.statusbar-item.remote-kind {
+  border-radius: 20px;
+}
+/* 左侧标签 */
+.activitybar.left > .content {
+  width: 40px !important;
+}
+.activitybar.left > .content .monaco-action-bar .action-item {
+  border-radius: 50%;
+  margin: 4px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: scale(0.8);
+}
+.activitybar.left > .content .monaco-action-bar .action-item .action-label {
+  width: 40px;
+  height: 40px;
+}
+.activitybar.left > .content .monaco-action-bar .action-item .action-label.codicon {
+  font-size: 20px !important;
+}
+.activitybar.left > .content .monaco-action-bar .action-item .action-label:not(.codicon) {
+  padding: 0;
+}
+.activitybar.left > .content .monaco-action-bar .action-item .badge .badge-content {
+  background-color: transparent !important;
+  color: #6699cc !important;
+  text-shadow: 0 0 6px #6699cc;
+  font-size: 14px;
+  font-weight: bold;
+  right: 0;
+}
+.activitybar.left > .content .monaco-action-bar .action-item.checked .action-label {
+  text-shadow: 0 0 6px #6699cc;
+  color: #6699cc !important;
+}
+.activitybar.left > .content .monaco-action-bar .action-item.checked .action-label.uri-icon {
+  background-color: #6699cc !important;
+}
+.activitybar.left > .content .monaco-action-bar .action-item.checked .active-item-indicator::before {
+  border-left-color: transparent !important;
+}
+/* 工作区 */
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
+  border-radius: 10px;
+  border-right-width: 0 !important;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  animation: scrollBorder 2s infinite linear;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+  border-image-slice: 1;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-actions .action-label.codicon {
+  border-radius: 50%;
+}
+.quick-input-widget {
+  --vscode-quickInput-background: transparent !important;
+}
+.quick-input-widget .focused {
+  --vscode-quickInputList-focusBackground: #ffffff11 !important;
+  border: 1px solid #ffffff22;
+}
+.monaco-inputbox {
+  --vscode-input-background: transparent !important;
+}
+.active-line-number {
+  --vscode-editorLineNumber-activeForeground: skyblue !important;
+  text-shadow: 0 0 20px skyblue;
+  animation: scaleIn 0.5s ease-in-out;
+  transform: scale(1.2);
+}
+.sticky-widget {
+  --vscode-editorStickyScroll-background: transparent !important;
+}
+.monaco-hover {
+  --vscode-editorHoverWidget-background: transparent !important;
+}
+.monaco-workbench {
+  --vscode-list-hoverBackground: transparent !important;
+}
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+/* ================== 其他样式 end ================== */
