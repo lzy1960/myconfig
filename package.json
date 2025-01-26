@@ -1,13 +1,13 @@
 {
   "name": "myconfig",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Various configurations that I personally use, including windows fonts, powershell, vscode, oh my zsh, oh my posh, starship",
   "main": "index.js",
   "scripts": {
     "gen:style": "bash ./scripts/compileStyle.sh"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["config", "vscode", "theme", "beautify"],
+  "author": "lzy1960",
   "license": "MIT",
   "devDependencies": {
     "less": "^4.2.1"

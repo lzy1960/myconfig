@@ -1,7 +1,7 @@
 #!/bin/bash
 
-INPUT_FILE="vscode-custom-css-js/less/userstyles.less"
-OUTPUT_FILE="vscode-custom-css-js/userstyles.css"
+INPUT_FILE="libs/vscode-custom-css-js/less/userstyles.less"
+OUTPUT_FILE="libs/vscode-custom-css-js/userstyles.css"
 
 # 检查 LESS 文件是否存在
 if [ ! -f "$INPUT_FILE" ]; then
