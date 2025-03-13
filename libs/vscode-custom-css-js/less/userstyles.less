@@ -32,7 +32,7 @@
   }
 }
 .monaco-sash {
-  transition: top 0s;
+  transition: top 0s, opacity 0.2s;
 }
 .sticky-widget,
 .overflowingContentWidgets > div,
@@ -85,40 +85,14 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   overflow: visible !important;
   transition-duration: 0.2s !important;
 }
-
-@keyframes jump {
-  0% {
-    transform: translateY(-20%);
-    height: 22px !important;
-  }
-  50% {
-    transform: translateY(20%);
-    height: 10px !important;
-  }
-  100% {
-    transform: translateY(-20%);
-    height: 22px !important;
-  }
-}
-
-@keyframes breath {
-  0% {
-    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
-  }
-}
 /* ================== 毛玻璃与动画相关样式 end ================== */
 
 /* ================== 字体 start ================== */
 .monaco-workbench .part > .title,
+.monaco-workbench.windows,
 .content,
 .items-container {
-  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold' !important;
 }
 
 .notifications-toasts {
@@ -182,10 +156,13 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 .monaco-workbench .part.editor > .content .editor-group-container {
   & > .title .tabs-container {
     & > .tab {
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
       border-right-width: 0 !important;
       &.active {
         .border-breath(bottom);
+      }
+      &:hover {
+        box-shadow: 0 0 6px 2px @shadow-color inset;
       }
       & > .tab-actions .action-label.codicon {
         border-radius: 50%;
@@ -225,6 +202,56 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   --vscode-list-hoverBackground: transparent !important;
 }
 
+// 边框渐变
+.monaco-split-view2 {
+  & > .sash-container .monaco-sash:not(.disabled) {
+    opacity: 0.5;
+    transform: translate3d(0, 0, 0);
+
+    &.vertical {
+      .border-breath(left, 2px);
+    }
+    &.horizontal {
+      .border-breath(top, 2px);
+    }
+    &.hover {
+      opacity: 1;
+      border-width: 4px;
+      box-shadow: 0 0 6px 2px @shadow-color;
+    }
+  }
+}
+/* ================== 其他样式 end ================== */
+
+/* ================== 动画定义 start ================== */
+
+@keyframes jump {
+  0% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+  50% {
+    transform: translateY(20%);
+    height: 10px !important;
+  }
+  100% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+}
+
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+}
+
 @keyframes scaleIn {
   0% {
     opacity: 0;
@@ -235,4 +262,4 @@ html body .monaco-workbench .monaco-action-bar .vertical {
     transform: scale(1.2);
   }
 }
-/* ================== 其他样式 end ================== */
+/* ================== 动画定义 end ================== */

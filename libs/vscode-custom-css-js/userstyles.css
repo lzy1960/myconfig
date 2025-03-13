@@ -1,12 +1,6 @@
 @keyframes scrollBorder {
-  0% {
-    border-image-source: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
-  }
-  50% {
-    border-image-source: linear-gradient(120deg, #c594c5, #6699cc, #6699cc, #8caf88);
-  }
   100% {
-    border-image-source: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+    filter: hue-rotate(360deg);
   }
 }
 /* ================== 毛玻璃与动画相关样式 start ================== */
@@ -33,7 +27,7 @@
   transition: top 0.05s, left 0s, height 0.05s;
 }
 .monaco-sash {
-  transition: top 0s;
+  transition: top 0s, opacity 0.2s;
 }
 .sticky-widget,
 .overflowingContentWidgets > div,
@@ -76,37 +70,13 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   overflow: visible !important;
   transition-duration: 0.2s !important;
 }
-@keyframes jump {
-  0% {
-    transform: translateY(-20%);
-    height: 22px !important;
-  }
-  50% {
-    transform: translateY(20%);
-    height: 10px !important;
-  }
-  100% {
-    transform: translateY(-20%);
-    height: 22px !important;
-  }
-}
-@keyframes breath {
-  0% {
-    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
-  }
-}
 /* ================== 毛玻璃与动画相关样式 end ================== */
 /* ================== 字体 start ================== */
 .monaco-workbench .part > .title,
+.monaco-workbench.windows,
 .content,
 .items-container {
-  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold' !important;
 }
 .notifications-toasts {
   font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
@@ -156,17 +126,20 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 }
 /* 工作区 */
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border-right-width: 0 !important;
 }
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active {
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  animation: scrollBorder 2s infinite linear;
+  animation: scrollBorder 3s infinite linear;
   border-bottom: 3px solid transparent;
   border-image: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
   border-image-slice: 1;
+}
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab:hover {
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) inset;
 }
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-actions .action-label.codicon {
   border-radius: 50%;
@@ -196,6 +169,60 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 .monaco-workbench {
   --vscode-list-hoverBackground: transparent !important;
 }
+.monaco-split-view2 > .sash-container .monaco-sash:not(.disabled) {
+  opacity: 0.5;
+  transform: translate3d(0, 0, 0);
+}
+.monaco-split-view2 > .sash-container .monaco-sash:not(.disabled).vertical {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  animation: scrollBorder 3s infinite linear;
+  border-left: 2px solid transparent;
+  border-image: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+  border-image-slice: 1;
+}
+.monaco-split-view2 > .sash-container .monaco-sash:not(.disabled).horizontal {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  animation: scrollBorder 3s infinite linear;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
+  border-image-slice: 1;
+}
+.monaco-split-view2 > .sash-container .monaco-sash:not(.disabled).hover {
+  opacity: 1;
+  border-width: 4px;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2);
+}
+/* ================== 其他样式 end ================== */
+/* ================== 动画定义 start ================== */
+@keyframes jump {
+  0% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+  50% {
+    transform: translateY(20%);
+    height: 10px !important;
+  }
+  100% {
+    transform: translateY(-20%);
+    height: 22px !important;
+  }
+}
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px 2px rgba(135, 206, 235, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 4px 2px rgba(135, 206, 235, 0.2);
+  }
+}
 @keyframes scaleIn {
   0% {
     opacity: 0;
@@ -206,4 +233,4 @@ html body .monaco-workbench .monaco-action-bar .vertical {
     transform: scale(1.2);
   }
 }
-/* ================== 其他样式 end ================== */
+/* ================== 动画定义 end ================== */
