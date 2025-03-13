@@ -53,6 +53,7 @@ function ContextmenuStylesheet() {
     sheet.replaceSync(`
 .monaco-menu {
     position: relative;
+    font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold' !important;
 }
 .monaco-menu::before {
     content: '';

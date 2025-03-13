@@ -73,9 +73,10 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 /* ================== 毛玻璃与动画相关样式 end ================== */
 /* ================== 字体 start ================== */
 .monaco-workbench .part > .title,
+.monaco-workbench.windows,
 .content,
 .items-container {
-  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold' !important;
 }
 .notifications-toasts {
   font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
@@ -137,6 +138,9 @@ html body .monaco-workbench .monaco-action-bar .vertical {
   border-image: linear-gradient(120deg, #6699cc, #8caf88, #c594c5, #6699cc);
   border-image-slice: 1;
 }
+.monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab:hover {
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2) inset;
+}
 .monaco-workbench .part.editor > .content .editor-group-container > .title .tabs-container > .tab > .tab-actions .action-label.codicon {
   border-radius: 50%;
 }
@@ -190,6 +194,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 .monaco-split-view2 > .sash-container .monaco-sash:not(.disabled).hover {
   opacity: 1;
   border-width: 4px;
+  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.2);
 }
 /* ================== 其他样式 end ================== */
 /* ================== 动画定义 start ================== */

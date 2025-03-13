@@ -89,9 +89,10 @@ html body .monaco-workbench .monaco-action-bar .vertical {
 
 /* ================== 字体 start ================== */
 .monaco-workbench .part > .title,
+.monaco-workbench.windows,
 .content,
 .items-container {
-  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold';
+  font-family: 'UbuntuSans Nerd Font Semibold', 'Sarasa Term SC Semibold' !important;
 }
 
 .notifications-toasts {
@@ -160,6 +161,9 @@ html body .monaco-workbench .monaco-action-bar .vertical {
       &.active {
         .border-breath(bottom);
       }
+      &:hover {
+        box-shadow: 0 0 6px 2px @shadow-color inset;
+      }
       & > .tab-actions .action-label.codicon {
         border-radius: 50%;
       }
@@ -213,6 +217,7 @@ html body .monaco-workbench .monaco-action-bar .vertical {
     &.hover {
       opacity: 1;
       border-width: 4px;
+      box-shadow: 0 0 6px 2px @shadow-color;
     }
   }
 }
